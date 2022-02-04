@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../views/style.css" type="text/css" > -->
+
+    <title>task2</title>
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  input{
+    padding: 9px;
+    margin: 15px;
+    border: 2px solid black;
+    font-weight:bold;
+    
+  }
+  input[type='radio'] { 
+     transform: scale(1); 
+     background-color: #ffa500;
+ }
+  input[type=submit] {
+    width: 15%;
+
+  background-color: orange;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: white;
+  color: orange;
+  border: 1px solid black;
+
+  
+}
+p{
+  padding-left: 40%;
+  text-align: left;
+}
+label{
+  width: 1px;
+  display:inline-block;
+  color: gray;
+}
+
+span.b {
+  display: inline-block;
+  width: 25%;
+  height: 20%;
+  padding: 5px;
+}
+div.question{
+  margin-top: 100px;
+  margin-right: 70px;
+  margin-left: 70px;
+
+}
+  
+  
+  </style>
+<body> 
+  <div style="text-align: center;font-weight: bold;font-family: Verdana, Geneva, Tahoma, sans-serif;"> 
+        <form >
+           
+            <div  class="question">
+              <span class="b">
+            <p>Question 1  </p>
+             <input type="radio" id="QuestionA1" name="Q1"  value="A">
+             <label for="html">A</label><br>
+             <input type="radio" id="QuestionB1" name="Q1" value="B">
+             <label for="css">B</label><br>
+             <input type="radio" id="QuestionC1" name="Q1"  value="C">
+             <label for="javascript">C</label>
+            </span>
+
+            <span class="b">
+
+             <p>Question 2  </p>
+             <input type="radio" id="QuestionA2" name="Q2" value="A">
+             <label for="html">A</label><br>
+             <input type="radio" id="QuestionB2" name="Q2" value="B">
+             <label for="css">B</label><br>
+             <input type="radio" id="QuestionC2" name="Q2" value="C">
+             <label for="javascript">C</label>
+            </span>
+
+
+             <span class="b">
+             <p>Question 3  </p>
+             <input type="radio" id="QuestionA3" name="Q3"  value="A">
+             <label for="html">A</label><br>
+             <input type="radio" id="QuestionB3"  name="Q3" value="B">
+             <label for="css">B</label><br>
+             <input type="radio" id="QuestionC3" name="Q3"  value="C">
+             <label for="javascript">C</label>
+            </span>
+
+
+            </div>
+          
+
+            
+              <br>   
+            
+
+
+
+
+            <input id='btn' name="Register" type="submit" placeholder='Register' value="Show Answers "  onclick="register(event)">
+        </form>
+        -----------------------------------------------------------------
+        <!-- user outputs -->
+        <p style="font-size: large;">Output</p>
+        <p> You entered the following answers </p>
+        <br>
+        <p><span id="display_radio1"></span></p>
+        <p> <span id="display_radio2"></span></p>
+        <p> <span id="display_radio3"></span></p>
+
+
+
+      </div>
+        
+   
+    <script>
+    const register = function (event) {
+    // declaring recived input
+ 
+
+    let r_rd1 =document.querySelector('input[name="Q1"]:checked').value;
+    let r_rd2 =document.querySelector('input[name="Q2"]:checked').value;
+    let r_rd3 =document.querySelector('input[name="Q3"]:checked').value;
+
+
+
+    // page output
+    display_radio1.innerHTML = r_rd1;
+    display_radio2.innerHTML = r_rd2;
+
+    display_radio3.innerHTML = r_rd3;
+
+    event.preventDefault();
+    };
+    </script>
+</body>
+</html>
+  </div>
+</body>
+</html>
